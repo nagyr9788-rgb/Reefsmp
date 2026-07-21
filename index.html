@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReefMC</title>
+<link rel="stylesheet" href="styles.css">
+<!--
+  ADDING YOUR LOGO:
+  Put your logo file at assets/logo.png in this repo, then uncomment
+  the <img> line just below and it'll show in the nav bar automatically.
+  A second, bigger copy shows in the hero — that <img> is already active,
+  just make sure assets/logo.png exists.
+-->
+</head>
+<body>
+
+<nav class="rmc-nav">
+  <a class="rmc-nav-logo" href="index.html">
+    <!-- <img src="assets/logo.png" alt="ReefMC"> -->
+    ReefMC
+  </a>
+  <div class="rmc-nav-links">
+    <a href="index.html" class="rmc-active">Home</a>
+    <a href="rules.html">Rules</a>
+    <a href="voting.html">Voting</a>
+    <a href="store.html">Store</a>
+  </div>
+</nav>
+
+<section class="rmc-hero">
+  <img class="rmc-hero-logo" src="assets/logo.png" alt="ReefMC logo" onerror="this.style.display='none'">
+  <h1>Welcome to ReefMC</h1>
+  <p class="rmc-tag">Join our Minecraft community today!</p>
+
+  <div class="rmc-ip-row">
+    <span class="rmc-ip" id="rmc-ip-text">play.reefmc.fun</span>
+    <button class="rmc-copy-btn" id="rmc-copy-btn" onclick="rmcCopyIP()">Copy</button>
+  </div>
+
+  <div class="rmc-btn-row">
+    <a class="rmc-btn rmc-btn-primary" href="https://discord.gg/reefmc" target="_blank" rel="noopener">Join Discord</a>
+    <a class="rmc-btn rmc-btn-ghost" href="https://store.reefmc.fun" target="_blank" rel="noopener">Visit Store</a>
+  </div>
+</section>
+
+<footer class="rmc-footer">
+  <div>ReefMC</div>
+  <div>
+    <a href="https://discord.gg/reefmc" target="_blank" rel="noopener">Discord</a>
+    <span class="rmc-footer-dot">&middot;</span>
+    <a href="https://store.reefmc.fun" target="_blank" rel="noopener">Store</a>
+    <span class="rmc-footer-dot">&middot;</span>
+    <span>play.reefmc.fun</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
