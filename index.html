@@ -5,20 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ReefMC</title>
 <link rel="stylesheet" href="styles.css">
-<!--
-  ADDING YOUR LOGO:
-  Put your logo file at assets/logo.png in this repo, then uncomment
-  the <img> line just below and it'll show in the nav bar automatically.
-  A second, bigger copy shows in the hero — that <img> is already active,
-  just make sure assets/logo.png exists.
--->
 </head>
 <body>
 
 <nav class="rmc-nav">
   <a class="rmc-nav-logo" href="index.html">
-    <!-- <img src="assets/logo.png" alt="ReefMC"> -->
-    ReefMC
+    <span class="rmc-nav-badge"></span>
+    <span class="rmc-nav-word">REEFMC</span>
   </a>
   <div class="rmc-nav-links">
     <a href="index.html" class="rmc-active">Home</a>
@@ -29,7 +22,17 @@
 </nav>
 
 <section class="rmc-hero">
-  <img class="rmc-hero-logo" src="assets/logo.png" alt="ReefMC logo" onerror="this.style.display='none'">
+  <div class="rmc-hero-bg"></div>
+  <div class="rmc-hero-texture"></div>
+  <div class="rmc-hero-shade"></div>
+  <div class="rmc-hero-content">
+    <div class="rmc-logo-badge"><span>R</span></div>
+    <p class="rmc-hero-word">REEFMC</p>
+    <p class="rmc-hero-sub">Minecraft Network</p>
+  </div>
+</section>
+
+<section class="rmc-intro-panel">
   <h1>Welcome to ReefMC</h1>
   <p class="rmc-tag">Join our Minecraft community today!</p>
 
@@ -40,7 +43,7 @@
 
   <div class="rmc-btn-row">
     <a class="rmc-btn rmc-btn-primary" href="https://discord.gg/reefmc" target="_blank" rel="noopener">Join Discord</a>
-    <a class="rmc-btn rmc-btn-ghost" href="https://store.reefmc.fun" target="_blank" rel="noopener">Visit Store</a>
+    <a class="rmc-btn rmc-btn-accent" href="https://store.reefmc.fun" target="_blank" rel="noopener">Visit Store</a>
   </div>
 </section>
 
