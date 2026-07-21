@@ -55,12 +55,9 @@ img { max-width: 100%; display: block; }
   gap: 10px;
   text-decoration: none;
 }
-.rmc-nav-badge {
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(180deg, var(--accent) 50%, var(--accent2) 50%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  border: 2px solid var(--line);
+.rmc-nav-logo-img {
+  height: 34px;
+  width: auto;
   flex-shrink: 0;
 }
 .rmc-nav-word {
@@ -113,26 +110,11 @@ img { max-width: 100%; display: block; }
   z-index: 2;
 }
 .rmc-hero-content { position: relative; z-index: 3; }
-.rmc-logo-badge {
-  width: 96px; height: 96px;
+.rmc-logo-hero-img {
+  width: min(420px, 80vw);
+  height: auto;
   margin: 0 auto 18px;
-  background: linear-gradient(180deg, var(--accent) 50%, var(--accent2) 50%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  border: 3px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 5px 5px 0 rgba(0,0,0,0.5);
-}
-.rmc-logo-badge span {
-  font-family: var(--font-pixel);
-  font-size: 30px; color: #fff;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
-}
-.rmc-hero-word {
-  font-family: var(--font-pixel);
-  font-size: clamp(20px, 4vw, 30px);
-  color: #fff; letter-spacing: 2px;
-  text-shadow: 3px 3px 0 rgba(0,0,0,0.5);
-  margin: 0;
+  filter: drop-shadow(5px 5px 0 rgba(0,0,0,0.5));
 }
 .rmc-hero-sub {
   font-size: 13px; color: var(--text-dim);
