@@ -247,6 +247,3 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent2); outli
   .rmc-ip-row { flex-wrap: wrap; }
   .rmc-vote-grid { grid-template-columns: 1fr; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .rmc-btn, .rmc-vote-btn { transition: none; }
-}
