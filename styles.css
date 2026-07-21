@@ -85,7 +85,8 @@ img { max-width: 100%; display: block; }
 .rmc-hero {
   position: relative;
   overflow: hidden;
-  padding: 70px 24px 60px;
+  padding: 110px 24px 90px;
+  min-height: 340px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -94,19 +95,14 @@ img { max-width: 100%; display: block; }
 }
 .rmc-hero-bg {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, #5b8fd6 0%, #8fc0e8 30%, #6ea852 52%, #395c2e 100%);
-  filter: blur(9px) brightness(0.55) saturate(1.05);
-  transform: scale(1.08);
+  background-image: url('hero-background.png');
+  background-size: cover;
+  background-position: center 60%;
   z-index: 0;
-}
-.rmc-hero-texture {
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 2px, transparent 2px, transparent 5px);
-  z-index: 1;
 }
 .rmc-hero-shade {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,12,16,0.25) 0%, rgba(10,12,16,0.55) 55%, rgba(14,16,20,0.92) 100%);
+  background: linear-gradient(180deg, rgba(10,12,16,0.15) 0%, rgba(10,12,16,0.35) 55%, rgba(14,16,20,0.88) 100%);
   z-index: 2;
 }
 .rmc-hero-content { position: relative; z-index: 3; }
@@ -226,6 +222,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent2); outli
 
 @media (max-width: 640px) {
   .rmc-nav { justify-content: center; text-align: center; }
+  .rmc-ip-row { flex-wrap: wrap; }
+  .rmc-vote-grid { grid-template-columns: 1fr; }
+}
+
   .rmc-ip-row { flex-wrap: wrap; }
   .rmc-vote-grid { grid-template-columns: 1fr; }
 }
