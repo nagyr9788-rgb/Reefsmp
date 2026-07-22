@@ -11,6 +11,28 @@ function rmcCopyIP() {
   });
 }
 
+// Copies the IP and shows the "IP Copied!" modal (used by the hero stat button)
+function rmcCopyIPModal() {
+  var text = 'play.reefmc.fun';
+  navigator.clipboard.writeText(text).then(function () {
+    var overlay = document.getElementById('rmc-modal-overlay');
+    if (overlay) overlay.classList.add('rmc-modal-visible');
+  });
+}
+
+function rmcCloseModal() {
+  var overlay = document.getElementById('rmc-modal-overlay');
+  if (overlay) overlay.classList.remove('rmc-modal-visible');
+}
+
+// Close modal on background click or Escape key
+document.addEventListener('click', function (e) {
+  if (e.target && e.target.id === 'rmc-modal-overlay') rmcCloseModal();
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') rmcCloseModal();
+});
+
 // Live player count (home page hero stat)
 (function () {
   var el = document.getElementById('rmc-player-count');
