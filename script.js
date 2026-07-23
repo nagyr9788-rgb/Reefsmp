@@ -8,7 +8,14 @@ function rmcCopyIP() {
     var original = btn.innerText;
     btn.innerText = 'Copied!';
     setTimeout(function () { btn.innerText = original; }, 1500);
+    var modal = document.getElementById('rmc-copy-modal');
+    if (modal) modal.classList.add('rmc-modal-active');
   });
+}
+
+function rmcCloseCopyModal() {
+  var modal = document.getElementById('rmc-copy-modal');
+  if (modal) modal.classList.remove('rmc-modal-active');
 }
 
 // Live player count (home page hero stat)
