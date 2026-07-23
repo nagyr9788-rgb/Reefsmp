@@ -94,69 +94,6 @@ a { color: inherit; }
 .rmc-hero-stat-text { text-align: left; }
 .rmc-hero-stat-num { font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: #fff; line-height: 1.3; }
 .rmc-hero-stat-sub { font-size: 11px; color: var(--text-dim); letter-spacing: 0.5px; }
-
-/* hero stats are now clickable (copy IP / open Discord) */
-a.rmc-hero-stat, button.rmc-hero-stat {
-  text-decoration: none;
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  transition: transform 0.12s ease, opacity 0.12s ease;
-}
-a.rmc-hero-stat:hover, button.rmc-hero-stat:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* IP-copied modal */
-.rmc-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 200;
-  padding: 20px;
-}
-.rmc-modal-overlay.rmc-modal-visible { display: flex; }
-.rmc-modal-card {
-  background: var(--bg-panel, #1b1e24);
-  border: 2px solid #000;
-  border-radius: 12px;
-  padding: 40px 36px;
-  text-align: center;
-  max-width: 320px;
-  width: 100%;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-}
-.rmc-modal-check {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 3px solid var(--accent-teal);
-  color: var(--accent-teal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-.rmc-modal-title { font-size: 21px; font-weight: 800; color: #fff; margin: 0 0 8px; }
-.rmc-modal-sub { font-size: 14px; color: var(--text-dim); margin: 0 0 26px; }
-.rmc-modal-close-btn {
-  background: var(--accent-orange);
-  color: #2a0d05;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 32px;
-  font-weight: 700;
-  font-size: 14px;
-  cursor: pointer;
-  transition: transform 0.1s ease;
-}
-.rmc-modal-close-btn:hover { transform: translateY(-1px); }
 .rmc-hero-logo-block { display: flex; flex-direction: column; align-items: center; }
 .rmc-logo-hero-img {
   width: min(300px, 55vw);
@@ -329,3 +266,45 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-orange);
   .rmc-vote-grid { grid-template-columns: 1fr; }
   .rmc-page { padding: 26px 20px; }
 }
+
+/* IP COPIED MODAL */
+.rmc-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(6,7,9,0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 20px;
+}
+.rmc-modal-overlay.rmc-modal-active { display: flex; }
+.rmc-modal {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 36px 32px 28px;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+.rmc-modal-check {
+  width: 66px; height: 66px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-teal);
+  color: var(--accent-teal);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 18px;
+}
+.rmc-modal-title { font-family: var(--font-heading); font-weight: 700; font-size: 20px; color: #fff; margin-bottom: 6px; }
+.rmc-modal-sub { font-size: 13.5px; color: var(--text-dim); margin-bottom: 22px; }
+.rmc-modal-close {
+  border: none;
+  background: var(--accent-teal);
+  color: #06231f;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 11px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.rmc-modal-close:hover { background: var(--accent-orange); color: #2a0d05; }
