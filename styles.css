@@ -89,6 +89,8 @@ a { color: inherit; }
   text-decoration: none;
   cursor: pointer;
   border-radius: 10px;
+  appearance: none;
+  -webkit-appearance: none;
   transition: background 0.12s ease, transform 0.12s ease;
 }
 .rmc-hero-stat:hover { background: rgba(255,255,255,0.06); transform: translateY(-1px); }
@@ -318,4 +320,3 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-orange);
   cursor: pointer;
 }
 .rmc-modal-close:hover { background: var(--accent-orange); color: #2a0d05; }
-
