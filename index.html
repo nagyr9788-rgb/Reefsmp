@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ReefMC</title>
-<link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -57,6 +56,17 @@
   <div class="rmc-btn-row">
     <a class="rmc-btn rmc-btn-primary" href="https://discord.gg/reefmc" target="_blank" rel="noopener">Join Discord</a>
     <a class="rmc-btn rmc-btn-accent" href="https://store.reefmc.fun" target="_blank" rel="noopener">Visit Store</a>
+  </div>
+</div>
+
+<div class="rmc-modal-overlay" id="rmc-copy-modal" onclick="if(event.target===this)rmcCloseCopyModal()">
+  <div class="rmc-modal">
+    <div class="rmc-modal-check">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div class="rmc-modal-title">IP Copied!</div>
+    <div class="rmc-modal-sub">Now go join the server!</div>
+    <button class="rmc-modal-close" onclick="rmcCloseCopyModal()">Close</button>
   </div>
 </div>
 <footer class="rmc-footer">
